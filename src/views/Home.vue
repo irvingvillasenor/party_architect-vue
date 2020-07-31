@@ -1,18 +1,46 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Vendors</h1>
+    <div v-for="vendor in vendors">
+      <img :src="vendor.image_url" alt="">
+      <h2>{{vendor.name}}</h2>
+      <router-link :to="`/signup`">More Info</router-link>
+    </div>
+
+    <h1>Categories</h1>
+    <div v-for="category in categories">
+      <img :src="category.image_url" alt="">
+      <h2>{{category.name}}</h2>
+    </div>
   </div>
+
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+<style>
+img {
+  width: 250px;
 }
+</style>
+
+<script>
+import axios from "axios";
+export default {
+  data: function () {
+    return {
+      vendors: [],
+      categories: [],
+    };
+  },
+  created: function () {
+    axios.get("/api/vendors").then((response) => {
+      console.log("All Vendors:", response.data);
+      this.vendors = response.data;
+    }),
+      axios.get("/api/categories").then((response) => {
+        console.log("All categories:", response.data);
+        this.categories = response.data;
+      });
+  },
+  methods: {},
+};
 </script>
