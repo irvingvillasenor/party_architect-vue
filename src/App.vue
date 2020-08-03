@@ -20,13 +20,13 @@
         <div class="navbar-translate">
           <a
             class="navbar-brand"
-            href="https://demos.creative-tim.com/now-ui-kit-pro/index.html"
+            href="/"
             rel="tooltip"
             title="Designed by Invision. Coded by Creative Tim"
             data-placement="bottom"
             target="_blank"
           >
-            Now Ui Kit Pro
+            Home
           </a>
           <button
             class="navbar-toggler"
@@ -49,18 +49,27 @@
         >
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="now-ui-icons design_image" aria-hidden="true"></i>
-                <p>Examples</p>
+              <a href="/categories" class="nav-link">
+                <i
+                  class="now-ui-icons design_bullet-list-67"
+                  aria-hidden="true"
+                ></i>
+                <p>Vendors</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">
+                <i class="now-ui-icons sport_user-run" aria-hidden="true"></i>
+                <p>Logout</p>
               </a>
             </li>
             <li class="nav-item">
               <a
                 class="nav-link btn btn-primary"
-                href="https://www.creative-tim.com/product/now-ui-kit-pro"
+                :href="`/users/${getUserId()}`"
                 target="_blank"
               >
-                <p>Buy Now</p>
+                <p>Profile</p>
               </a>
             </li>
           </ul>
