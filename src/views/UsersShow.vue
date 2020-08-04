@@ -30,64 +30,72 @@
     <div class="section">
       <div class="container">
         <div class="button-container">
-          <a href="#button" class="btn btn-primary btn-round btn-lg"
+          <a href="/parties-create" class="btn btn-primary btn-round btn-lg"
             >Add Party</a
           >
-          <a
-            href="#button"
-            class="btn btn-default btn-round btn-lg btn-icon"
-            rel="tooltip"
-            title="Follow me on Twitter"
-          >
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a
-            href="#button"
-            class="btn btn-default btn-round btn-lg btn-icon"
-            rel="tooltip"
-            title="Follow me on Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#button" class="btn btn-primary btn-round btn-lg"
+          <a href="/vendors-create" class="btn btn-primary btn-round btn-lg"
             >Add Vendor</a
           >
+          <a
+            :href="`/users/${user.id}/edit`"
+            class="btn btn-primary btn-round btn-lg"
+            >Edit Profile</a
+          >
         </div>
-        <h3 class="title">About me</h3>
-        <h5 class="description text-center">
-          An artist of considerable range, Ryan — the name taken by
-          Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and
-          records all of his own music, giving it a warm, intimate feel with a
-          solid groove structure. An artist of considerable range.
-        </h5>
       </div>
     </div>
-    <img :src="user.image_url" alt="" /><br />
-    <h1>{{ user.first_name }} {{ user.last_name }}</h1>
-    <p>{{ user.email }}</p>
-    -->
-    <!-- <p>{{user.image_url}}</p> -->
-    <router-link :to="`/users/${user.id}/edit`">Edit</router-link>
 
-    <h2>Parties</h2>
-    <div>
-      <router-link to="/parties-create">New Party</router-link>
+    <!--User Parties List-->
+    <!--     *********    PRICING 1     *********      -->
+    <div class="row" v-if="user.parties.length > 0">
+      <div class="col-md-6 col-lg-3" v-for="party in user.parties">
+        <div
+          class="card card-pricing card-background"
+          :style="`background-image: url('${party.image_url}')`"
+        >
+          <div class="card-body">
+            <div class="icon icon-primary">
+              <i class="now-ui-icons media-1_button-power"></i>
+            </div>
+            <h2 class="card-title">${{ party.budget }}</h2>
+            <p class="card-description">
+              {{ party.occasion }}
+            </p>
+            <a :href="`/parties/${party.id}`" class="btn btn-primary btn-round">
+              Open
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+    <!--     *********    END PRICING 1      *********      -->
 
-    <div v-for="party in user.parties">
-      <img :src="party.image_url" alt="" /><br />
-      <p>{{ party.occasion }}</p>
-      <router-link :to="`/parties/${party.id}`">View Party</router-link>
+    <!--     *********    PRICING 2     *********      -->
+    <div class="row" v-if="user.vendors.length > 0">
+      <div class="col-md-6 col-lg-3" v-for="vendor in user.vendors">
+        <div
+          class="card card-pricing card-background"
+          :style="`background-image: url('${vendor.image_url}')`"
+        >
+          <div class="card-body">
+            <div class="icon icon-primary">
+              <i class="now-ui-icons business_badge"></i>
+            </div>
+            <h2 class="card-title">{{ vendor.name }}</h2>
+            <p class="card-description">
+              {{ vendor.website_url }}
+            </p>
+            <a
+              :href="`/vendors/${vendor.id}`"
+              class="btn btn-primary btn-round"
+            >
+              Open
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <h2>Vendors</h2>
-    <div v-for="vendor in user.vendors">
-      <img :src="vendor.image_url" alt="" /><br />
-      <router-link :to="`/vendors/${vendor.id}`">{{ vendor.name }}</router-link>
-    </div>
-
-    <div>
-      <router-link to="/vendors-create">New Vendor</router-link>
-    </div>
+    <!--     *********    END PRICING 2      *********      -->
   </div>
 </template>
 

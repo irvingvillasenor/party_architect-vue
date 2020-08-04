@@ -7,8 +7,23 @@
         :style="`background-image: url('${vendor.image_url}');`"
       ></div>
     </div>
-    <!-- <h1>{{ vendor.name }}</h1>
-    <p>{{ vendor.category_id }}</p>
+    <div v-for="party in vendor.user_parties">
+      <a
+        href="/categories"
+        class="btn btn-primary btn-round"
+        v-on:click="createVendorParty(party)"
+      >
+        Add to {{ party.occasion }}
+      </a>
+      <a
+        :href="`/vendors/${vendor.id}/edit`"
+        class="btn btn-secondary btn-round"
+        v-if="$parent.getUserId() == vendor.user_id"
+      >
+        Edit {{ party.occasion }}
+      </a>
+    </div>
+    <!-- <p>{{ vendor.category_id }}</p>
     <p>{{ vendor.zip_code }}</p>
     <p>{{ vendor.website_url }}</p>
     <img :src="vendor.image_url" alt="" /><br />
