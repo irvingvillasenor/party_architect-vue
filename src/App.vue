@@ -40,12 +40,6 @@
                 <p>Vendors</p>
               </a>
             </li> -->
-            <li class="nav-item" v-if="isLoggedIn()">
-              <a href="/logout" class="nav-link">
-                <i class="now-ui-icons sport_user-run" aria-hidden="true"></i>
-                <p>Logout</p>
-              </a>
-            </li>
             <li class="nav-item" v-if="!isLoggedIn()">
               <a href="/signup" class="nav-link">
                 <i class="now-ui-icons files_paper" aria-hidden="true"></i>
@@ -70,12 +64,12 @@
                 <p>Profile</p>
               </a>
             </li> -->
-            <li class="nav-item" v-if="isLoggedIn()">
+            <!-- <li class="nav-item" v-if="isLoggedIn()">
               <a class="nav-link" :href="`/users/${getUserId()}`">
                 <i class="now-ui-icons users_circle-08"></i>
                 <p>Profile</p>
               </a>
-            </li>
+            </li> -->
 
             <li class="nav-item dropdown nav-item-image" v-if="isLoggedIn()">
               <a
@@ -97,20 +91,26 @@
                 <a
                   class="dropdown-item"
                   v-if="isLoggedIn()"
+                  :href="`/users/${getUserId()}`"
+                  ><i class="now-ui-icons users_circle-08"></i>Profile</a
+                >
+                <a
+                  class="dropdown-item"
+                  v-if="isLoggedIn()"
                   href="/parties-create"
-                  >New Party</a
+                  ><i class="now-ui-icons media-2_sound-wave"></i>New Party</a
                 >
                 <a
                   class="dropdown-item"
                   v-if="isLoggedIn()"
                   href="/vendors-create"
-                  >New Vendor</a
+                  ><i class="now-ui-icons business_badge"></i>New Vendor</a
                 >
                 <a class="dropdown-item" v-if="isLoggedIn()" href="/logout"
-                  >Logout</a
+                  ><i class="now-ui-icons sport_user-run"></i>Logout</a
                 >
                 <a class="dropdown-item" v-if="isLoggedIn()" href="/categories"
-                  >Vendors</a
+                  ><i class="now-ui-icons text_align-center"></i>Vendors</a
                 >
               </div>
             </li>
@@ -220,8 +220,13 @@
             </a>
           </li>
           <li>
-            <a href="#pablo">
-              Contact Us
+            <a href="/signup">
+              Signup
+            </a>
+          </li>
+          <li>
+            <a href="/login">
+              Login
             </a>
           </li>
         </ul>

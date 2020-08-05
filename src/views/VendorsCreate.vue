@@ -1,126 +1,123 @@
 <template>
   <div class="vendors-create login-page">
     <form>
-      <div class="page-header header-filter" filter-color="orange">
+      <div class="page-header header-filter" filter-color="black">
         <div
           class="page-header-image"
-          style="background-image: url(/assets/img/login.jpg);"
+          style="background-image: url(/caters.jpg);"
         ></div>
-        <div class="content">
-          <div class="container">
-            <div class="col-md-5 ml-auto mr-auto">
-              <div class="card card-login card-plain">
-                <form
-                  class="form"
-                  method=""
-                  action=""
-                  v-on:submit.prevent="submit()"
-                >
-                  <!--Login Logo-->
-                  <div class="card-header text-center">
-                    <div class="logo-container">
-                      <img src="/assets/img/now-logo.png" alt="" />
-                    </div>
-                    <h2>Welcome Vendors</h2>
-                  </div>
-                  <!--Login Logo End-->
 
-                  <!--Vendor Create Form-->
-                  <div class="card-body">
-                    <div class="input-group no-border input-lg">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"
-                          ><i class="now-ui-icons users_circle-08"></i
-                        ></span>
-                      </div>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Vendor Name..."
-                        v-model="name"
-                      />
+        <div class="container">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="card card-login card-plain">
+              <form
+                class="form"
+                method=""
+                action=""
+                v-on:submit.prevent="submit()"
+              >
+                <!--Login Logo-->
+                <div class="card-header text-center">
+                  <img src="/partyArchitect (1).png" alt="" />
+                  <h4>Welcome Vendors</h4>
+                </div>
+                <!--Login Logo End-->
+                <!--Vendor Create Form-->
+                <div class="card-body">
+                  <div class="input-group no-border input-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="now-ui-icons users_circle-08"></i
+                      ></span>
                     </div>
-                    <div class="input-group no-border input-lg">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"
-                          ><i class="now-ui-icons users_circle-08"></i
-                        ></span>
-                      </div>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Vendor Address..."
-                        v-model="zip_code"
-                      />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Vendor Name..."
+                      v-model="name"
+                    />
+                  </div>
+                  <div class="input-group no-border input-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="now-ui-icons users_circle-08"></i
+                      ></span>
                     </div>
-                    <div class="input-group no-border input-lg">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"
-                          ><i class="now-ui-icons users_circle-08"></i
-                        ></span>
-                      </div>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Web Address..."
-                        v-model="website_url"
-                      />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Vendor Address..."
+                      v-model="zip_code"
+                    />
+                  </div>
+                  <div class="input-group no-border input-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="now-ui-icons users_circle-08"></i
+                      ></span>
                     </div>
-                    <div class="input-group no-border input-lg">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"
-                          ><i class="now-ui-icons users_circle-08"></i
-                        ></span>
-                      </div>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Vendor Details..."
-                        v-model="details"
-                      />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Web Address..."
+                      v-model="website_url"
+                    />
+                  </div>
+                  <div class="input-group no-border input-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="now-ui-icons users_circle-08"></i
+                      ></span>
                     </div>
-                    <div class="input-group no-border input-lg">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"
-                          ><i class="now-ui-icons users_circle-08"></i
-                        ></span>
-                      </div>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Vendor Price..."
-                        v-model="price"
-                      />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Vendor Details..."
+                      v-model="details"
+                    />
+                  </div>
+                  <div class="input-group no-border input-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="now-ui-icons users_circle-08"></i
+                      ></span>
                     </div>
-                    <div class="input-group">
-                      <input
-                        type="file"
-                        class="form-control btn btn-secondary btn-round btn-lg"
-                        placeholder="Upload Image..."
-                        v-on:change="setFile($event)"
-                        ref="fileInput"
-                      />
-                    </div>
-                    <!--                 select -->
-                    <div class="form-group dropdown bootstrap-select">
-                      <select
-                        name="categories"
-                        id="categories"
-                        v-model="category_id"
-                        class="selectpicker"
-                        data-size="7"
-                        data-style="btn btn-primary btn-round btn-block"
-                        title="Select Category"
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Vendor Price..."
+                      v-model="price"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <input
+                      type="file"
+                      class="form-control btn btn-secondary btn-round btn-lg"
+                      placeholder="Upload Image..."
+                      v-on:change="setFile($event)"
+                      ref="fileInput"
+                    />
+                  </div>
+                  <!--                 select -->
+                  <div class="form-group dropdown bootstrap-select">
+                    <select
+                      name="categories"
+                      id="categories"
+                      v-model="category_id"
+                      class="selectpicker"
+                      data-size="7"
+                      data-style="btn btn-primary btn-round btn-block"
+                      title="Select Category"
+                    >
+                      <option
+                        v-for="category in categories"
+                        :value="category.id"
+                        >{{ category.name }}</option
                       >
-                        <option
-                          v-for="category in categories"
-                          :value="category.id"
-                          >{{ category.name }}</option
-                        >
-                      </select>
-                    </div>
-                    <!--                 end select -->
-                    <!-- <div class="form-group">
+                    </select>
+                  </div>
+                  <!--                 end select -->
+                  <!-- <div class="form-group">
                       <label>Select Category:</label>
                       <select
                         name="categories"
@@ -134,22 +131,21 @@
                         >
                       </select>
                     </div> -->
-                  </div>
-                  <!--Vendor Create Form End -->
+                </div>
+                <!--Vendor Create Form End -->
 
-                  <!--Vendor Create Button-->
-                  <div class="card-footer text-center">
-                    <button
-                      type="submit"
-                      class="btn btn-success btn-round btn-lg btn-block"
-                      value="Submit"
-                    >
-                      Create Vendor
-                    </button>
-                  </div>
-                  <!--Vendor Create Button End-->
-                </form>
-              </div>
+                <!--Vendor Create Button-->
+                <div class="card-footer text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-round btn-lg btn-block"
+                    value="Submit"
+                  >
+                    Create Vendor
+                  </button>
+                </div>
+                <!--Vendor Create Button End-->
+              </form>
             </div>
           </div>
         </div>

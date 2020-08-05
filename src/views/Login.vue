@@ -1,12 +1,19 @@
 <template>
-  <div class="login-page page-header header-filter" filter-color="orange">
+  <div class="login-page page-header header-filter" filter-color="black">
     <div
       class="page-header-image"
-      style="background-image:url(/assets/img/login.jpg)"
+      style="background-image:url(/outdoor.jpg)"
     ></div>
     <div class="content">
       <div class="container">
         <div class="col-md-5 ml-auto mr-auto">
+          <!--Login Logo-->
+          <div class="card-header text-center">
+            <div class="logo-container">
+              <img src="/partyArchitect (1).png" alt="" />
+            </div>
+          </div>
+          <!--Login Logo End-->
           <div class="card card-login card-plain">
             <form
               class="form"
@@ -14,14 +21,6 @@
               action=""
               v-on:submit.prevent="submit()"
             >
-              <!--Login Logo-->
-              <div class="card-header text-center">
-                <div class="logo-container">
-                  <img src="/assets/img/now-logo.png" alt="" />
-                </div>
-              </div>
-              <!--Login Logo End-->
-              <h1>Party Architect</h1>
               <h2>Login</h2>
               <ul>
                 <li class="text-danger" v-for="error in errors">{{ error }}</li>

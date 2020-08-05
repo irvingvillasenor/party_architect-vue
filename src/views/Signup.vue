@@ -47,7 +47,7 @@
     <div class="page-header header-filter" filter-color="black">
       <div
         class="page-header-image"
-        style="background-image:url(/assets/img/bg18.jpg)"
+        style="background-image:url(/confetti.jpg)"
       ></div>
       <div class="content">
         <div class="container">
