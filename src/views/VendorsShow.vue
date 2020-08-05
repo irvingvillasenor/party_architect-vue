@@ -7,22 +7,77 @@
         :style="`background-image: url('${vendor.image_url}');`"
       ></div>
     </div>
-    <div v-for="party in vendor.user_parties">
-      <a
-        href="/categories"
-        class="btn btn-primary btn-round"
-        v-on:click="createVendorParty(party)"
-      >
-        Add to {{ party.occasion }}
-      </a>
-      <a
-        :href="`/vendors/${vendor.id}/edit`"
-        class="btn btn-secondary btn-round"
-        v-if="$parent.getUserId() == vendor.user_id"
-      >
-        Edit {{ party.occasion }}
-      </a>
+
+    <!-- Button trigger modal -->
+    <!-- <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <!-- <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="section">
+      <div class="container">
+        <div class="button-container text-center">
+          <a
+            v-for="party in vendor.user_parties"
+            type="buton"
+            v-on:click="createVendorParty(party)"
+            class="btn btn-primary btn-outline-primary btn-round"
+            >Add to {{ party.occasion }}</a
+          >
+        </div>
+      </div>
     </div>
+
+    <button
+      :href="`/vendors/${vendor.id}/edit`"
+      class="btn btn-primary btn-round"
+      v-if="$parent.getUserId() == vendor.user_id"
+    >
+      Edit {{ vendor.name }}
+    </button>
     <!-- <p>{{ vendor.category_id }}</p>
     <p>{{ vendor.zip_code }}</p>
     <p>{{ vendor.website_url }}</p>

@@ -1,6 +1,6 @@
 <template>
   <div class="signup signup-page sidebar-collapse">
-    <form v-on:submit.prevent="submit()">
+    <!-- <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
@@ -43,11 +43,11 @@
         />
       </div>
       <input type="submit" class="btn btn-primary" value="Submit" />
-    </form>
+    </form> -->
     <div class="page-header header-filter" filter-color="black">
       <div
         class="page-header-image"
-        style="background-image:url(../assets/img/bg18.jpg)"
+        style="background-image:url(/assets/img/bg18.jpg)"
       ></div>
       <div class="content">
         <div class="container">
@@ -195,13 +195,13 @@
                       </label>
                     </div>
                     <div class="card-footer text-center">
-                      <a
-                        href="/login"
+                      <button
                         type="submit"
                         class="btn btn-primary btn-round btn-lg"
-                        value="submit"
-                        >Get Started</a
+                        value="Submit"
                       >
+                        Get Started
+                      </button>
                     </div>
                   </form>
                 </div>
