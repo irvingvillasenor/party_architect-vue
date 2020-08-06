@@ -119,7 +119,7 @@
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"
-                          ><i class="now-ui-icons text_caps-small"></i
+                          ><i class="now-ui-icons users_circle-08"></i
                         ></span>
                       </div>
                       <input
@@ -146,7 +146,7 @@
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"
-                          ><i class="now-ui-icons ui-1_email-85"></i
+                          ><i class="now-ui-icons media-1_camera-compact"></i
                         ></span>
                       </div>
                       <input
@@ -161,7 +161,7 @@
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"
-                          ><i class="now-ui-icons ui-1_email-85"></i
+                          ><i class="now-ui-icons objects_key-25"></i
                         ></span>
                       </div>
                       <input
@@ -175,7 +175,7 @@
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"
-                          ><i class="now-ui-icons ui-1_email-85"></i
+                          ><i class="now-ui-icons objects_key-25"></i
                         ></span>
                       </div>
                       <input

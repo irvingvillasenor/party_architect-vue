@@ -46,10 +46,11 @@
                     <div class="card-footer">
                       <button
                         type="button"
-                        class="btn btn-icon btn-primary btn-md"
+                        class="btn btn-pill btn-primary btn-md"
                         v-on:click="destroyVendorParty(vendor)"
                       >
-                        <i class="fab fa-dribbble"></i>
+                        <!-- <i class="fab fa-dribbble"></i> -->
+                        Remove
                       </button>
                     </div>
                   </div>

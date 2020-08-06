@@ -49,7 +49,7 @@
 
     <!--Party/ Vendor Section-->
     <div class="main">
-      <div class="container">
+      <div class="container text-center">
         <div class="section">
           <br />
           <!--Party Cards -->

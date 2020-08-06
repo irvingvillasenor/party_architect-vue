@@ -57,6 +57,13 @@
       </div>
     </div> -->
 
+    <button
+      :href="`/vendors/${vendor.id}/edit`"
+      class="btn btn-primary btn-round"
+      v-if="$parent.getUserId() == vendor.user_id"
+    >
+      Edit {{ vendor.name }}
+    </button>
     <div class="section">
       <div class="container">
         <div class="button-container text-center">
@@ -71,13 +78,6 @@
       </div>
     </div>
 
-    <button
-      :href="`/vendors/${vendor.id}/edit`"
-      class="btn btn-primary btn-round"
-      v-if="$parent.getUserId() == vendor.user_id"
-    >
-      Edit {{ vendor.name }}
-    </button>
     <!-- <p>{{ vendor.category_id }}</p>
     <p>{{ vendor.zip_code }}</p>
     <p>{{ vendor.website_url }}</p>
