@@ -99,16 +99,16 @@
                     />
                   </div>
                   <!--                 select -->
-                  <div class="form-group dropdown bootstrap-select">
+                  <div class="form-group">
+                    <!-- {{ categories }} -->
                     <select
                       name="categories"
                       id="categories"
                       v-model="category_id"
-                      class="selectpicker"
-                      data-size="7"
-                      data-style="btn btn-primary btn-round btn-block"
+                      class="btn btn-primary btn-round btn-block"
                       title="Select Category"
                     >
+                      <option value="">Select Category</option>
                       <option
                         v-for="category in categories"
                         :value="category.id"

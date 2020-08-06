@@ -165,7 +165,7 @@
                         ></span>
                       </div>
                       <input
-                        type="text"
+                        type="password"
                         class="form-control"
                         placeholder="Your Password..."
                         autocomplete="password"
@@ -179,7 +179,7 @@
                         ></span>
                       </div>
                       <input
-                        type="text"
+                        type="password"
                         class="form-control"
                         placeholder="Password Confirmation..."
                         autocomplete="passwordConfirmation"
