@@ -101,7 +101,7 @@
           <div class="col-md-8 ml-auto mr-auto">
             <h2 class="title">We Love to PARTY</h2>
             <h4 class="description">
-              Here are some pictures of whagt Party Architect can offer. You can
+              Here are some pictures of what Party Architect can offer. You can
               see we are like a palace and is fully equiped with everything you
               need to get the job done.
             </h4>
