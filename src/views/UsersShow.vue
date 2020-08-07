@@ -53,6 +53,7 @@
         <div class="section">
           <br />
           <!--Party Cards -->
+          <!-- <h1>PARTIES</h1> -->
           <div class="row" v-if="user.parties.length > 0">
             <div class="col-md-4" v-for="party in user.parties">
               <div class="card card-plain card-blog">
@@ -74,6 +75,7 @@
             </div>
           </div>
           <!--Party Cards End-->
+          <!-- <h1>VENDORS</h1> -->
           <!--Vendor Cards-->
           <div class="row" v-if="user.vendors.length > 0">
             <div class="col-md-4" v-for="vendor in user.vendors">
@@ -88,9 +90,9 @@
                 </div>
                 <div class="card-body">
                   <h6 class="category text-info">{{ vendor.name }}</h6>
-                  <h4 class="card-title text-align">
+                  <h5 class="card-title text-align">
                     {{ vendor.website_url }}
-                  </h4>
+                  </h5>
                 </div>
               </div>
             </div>

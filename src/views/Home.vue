@@ -14,6 +14,7 @@
               <img src="/partyArchitect.v1.png" alt="" />
 
               <!--Login Logo End-->
+              <!-- Social Media Buttons-->
               <div class="text-center">
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round">
                   <i class="fab fa-facebook-square"></i>
@@ -25,6 +26,7 @@
                   <i class="fab fa-google-plus"></i>
                 </a>
               </div>
+              <!-- Social Media Buttons End-->
             </div>
           </div>
         </div>

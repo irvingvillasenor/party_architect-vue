@@ -210,11 +210,6 @@
         <a class="footer-brand" href="#pablo">PARTY ARCHITECT</a>
         <ul class="pull-center">
           <li>
-            <a href="/categories">
-              Vendors
-            </a>
-          </li>
-          <li>
             <a href="/">
               Home
             </a>
